@@ -109,12 +109,24 @@ export class WarmUpScene extends Scene {
 				await ctx.reply(warmup_step4, {
 					reply_markup: {
 						inline_keyboard: [
-							[{text: 'Заполнил', callback_data: 'mainmenu'}]
+							[{text: 'Заполнил', callback_data: 'form_complete'}]
 						]
 					}
 				});
 				return ctx.wizard.next();
 			},
+			stepHandler1,
+			async (ctx) => {
+				await ctx.reply('Подбираю подходящий вариант и выстраиваю последовательность шагов')
+				await ctx.reply('Ожидайте связи от меня!', {
+					reply_markup: {
+						inline_keyboard: [
+							[{ text: 'Главное меню', callback_data: 'mainmenu' }]
+						]
+					}
+				})
+				ctx.scene.leave();
+			}
 		);
 	}
 }

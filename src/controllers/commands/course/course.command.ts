@@ -24,6 +24,7 @@ export class CourseCommand extends Command {
 			// 	height: 180,
 			// 	caption: course_keymoney_txt,
 			// })
+			ctx.reply(course_keymoney_txt, { reply_markup: course_tobuy_btn })
 		})
 
 		this.bot.action('inv-master', (ctx) => {
@@ -33,6 +34,7 @@ export class CourseCommand extends Command {
 			// 	height: 180,
 			// 	caption: course_invmaster_txt,
 			// })
+			ctx.reply(course_invmaster_txt, { reply_markup: course_tobuy_btn })
 		})
 
 		this.bot.action('airdrop', (ctx) => {
@@ -42,6 +44,7 @@ export class CourseCommand extends Command {
 			// 	height: 180,
 			// 	caption: course_airdrop_txt,
 			// })
+			ctx.reply(course_airdrop_txt, { reply_markup: course_tobuy_btn })
 		})
 
 		this.bot.action('purchase', (ctx) => {
