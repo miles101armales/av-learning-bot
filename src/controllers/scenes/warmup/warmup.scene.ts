@@ -66,11 +66,6 @@ export class WarmUpScene extends Scene {
 			ctx.wizard.next();
 		})
 
-		const stepHandler1 = new Composer<IBotContext>();
-		stepHandler1.action('form_complete', async (ctx) => {
-			ctx.scene.leave();
-		})
-
 		this.scene = new Scenes.WizardScene(
 			'warmup',
 			async ctx => {
@@ -115,7 +110,6 @@ export class WarmUpScene extends Scene {
 				});
 				return ctx.wizard.next();
 			},
-			stepHandler1,
 			async (ctx) => {
 				await ctx.reply('Подбираю подходящий вариант и выстраиваю последовательность шагов')
 				await ctx.reply('Ожидайте связи от меня!', {
