@@ -22,7 +22,7 @@ export class StartCommand extends Command {
 			ctx.reply(`Ваш номер:\n\n${ctx.session.phoneToCall}\n\nВерно?`, {
 				reply_markup: {
 					inline_keyboard: [
-						[{text: 'Верно!', callback_data: 'mainmenu'}]
+						[{text: 'Верно!', callback_data: 'phone_complete'}]
 					]
 				}
 			});

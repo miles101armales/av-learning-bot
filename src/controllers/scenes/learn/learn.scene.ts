@@ -12,6 +12,7 @@ export class LearnScene extends Scene {
 
 	handle() {
 		const stepHandler = new Composer<IBotContext>();
+		
 		stepHandler.action('mainmenu', async (ctx: IBotContext) => {
 			return await ctx.scene.leave();
 		});

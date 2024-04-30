@@ -128,3 +128,24 @@ export const practice_fail_btn = {
 		]
 	}
 }
+
+export const warmup_watch_complete = {
+		inline_keyboard: [
+			[{ text: 'Просмотрено', callback_data: 'watch1_complete' }]
+		]
+}
+
+export const warmup_step1 = 'Приветствуем! Смотри видео ниже ⬇'
+
+export const warmup_step2 = 'Оцените свое желание двигаться дальше:\n\nНапишите сообщение ниже с цифрой от 1 до 10'
+
+export const warmup_step3 = 'Спасибо за ваш ответ. Вот следующее видео'
+
+export const warmup_step4 = 'Благодарим за просмотр урока!\n\nhttps://forms.gle/sKr2itz2od4fEPSE8\n\nЗаполните небольшую форму и после нажмите кнопку "Заполнил!"'
+export const warmup_step4_btn = {
+	reply_markup: {
+		inline_keyboard: [
+			[{ text: 'Заполнил', callback_data: 'form_complete' }]
+		]
+	}
+}

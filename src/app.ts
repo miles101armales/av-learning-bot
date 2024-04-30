@@ -12,6 +12,7 @@ import { Scene } from './controllers/scenes/base/scene.class';
 import { PracticeScene } from './controllers/scenes/practice/practice.scene';
 import LocalSession from 'telegraf-session-local';
 import { IBotContext } from './models/context.interface';
+import { WarmUpScene } from './controllers/scenes/warmup/warmup.scene';
 
 export class Bot {
 	bot: Telegraf<IBotContext>;
@@ -46,6 +47,7 @@ export class Bot {
 			this.scenes = [
 				new LearnScene(this.bot),
 				new PracticeScene(this.bot),
+				new WarmUpScene(this.bot),
 			]
 			for (const scene of this.scenes) {
 				scene.handle();
@@ -58,6 +60,7 @@ export class Bot {
 
 			this.bot.action('practice', ctx => ctx.scene.enter('practice'))
 			this.bot.action('learn', ctx => ctx.scene.enter('learn'))
+			this.bot.action('phone_complete', ctx => ctx.scene.enter('warmup'))
 
 			this.bot.command('practice', ctx => ctx.scene.enter('practice'))
 			this.bot.command('learn', ctx => ctx.scene.enter('learn'))
