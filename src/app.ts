@@ -58,8 +58,10 @@ export class Bot {
 			this.bot.launch();
 			this.loggerService.log('Бот успешно запущен')
 
-			this.bot.action('practice', ctx => ctx.scene.enter('practice'))
-			this.bot.action('learn', ctx => ctx.scene.enter('learn'))
+			// this.bot.action('practice', ctx => ctx.scene.enter('practice'))
+			// this.bot.action('learn', ctx => ctx.scene.enter('learn'))
+			this.bot.action('practice', ctx => ctx.reply('Запись практики в процессе'))
+			this.bot.action('learn', ctx => ctx.reply('Запись урока в процессе'))
 			this.bot.action('phone_complete', ctx => ctx.scene.enter('warmup'))
 
 			this.bot.command('practice', ctx => ctx.scene.enter('practice'))
