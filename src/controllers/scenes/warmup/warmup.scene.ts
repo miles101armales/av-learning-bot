@@ -69,9 +69,11 @@ export class WarmUpScene extends Scene {
 		this.scene = new Scenes.WizardScene(
 			'warmup',
 			async ctx => {
-				ctx.reply(warmup_step1)
-				await ctx.telegram.sendVideoNote(ctx.chat.id, { source: './src/public/videos/greeting_video_1.MOV'}, {
+				await ctx.telegram.sendVideo(ctx.chat.id, { source: './src/public/videos/greeting_video_1.MOV'}, {
 					reply_markup: warmup_watch_complete,
+					width: 180,
+					height: 320,
+					caption: warmup_step1,
 				})
 				return ctx.wizard.next();
 			},
@@ -90,9 +92,11 @@ export class WarmUpScene extends Scene {
 			},
 			stepHandler,
 			async ctx => {
-				ctx.reply(warmup_step3)
-				await ctx.telegram.sendVideoNote(ctx.chat.id, { source: './src/public/videos/greeting_video_2.MOV'}, {
+				await ctx.telegram.sendVideo(ctx.chat.id, { source: './src/public/videos/greeting_video_2.MOV'}, {
 					reply_markup: warmup_watch_complete,
+					width: 180,
+					height: 320,
+					caption: warmup_step3,
 				})
 				return ctx.wizard.next();
 			},
