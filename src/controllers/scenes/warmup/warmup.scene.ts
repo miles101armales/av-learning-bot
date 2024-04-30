@@ -106,7 +106,13 @@ export class WarmUpScene extends Scene {
 				return ctx.wizard.next();
 			},
 			async ctx => {
-				await ctx.reply(warmup_step4, warmup_step4_btn);
+				await ctx.reply(warmup_step4, {
+					reply_markup: {
+						inline_keyboard: [
+							[{text: 'Заполнил', callback_data: 'mainmenu'}]
+						]
+					}
+				});
 				return ctx.wizard.next();
 			},
 		);
