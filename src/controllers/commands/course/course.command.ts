@@ -18,30 +18,30 @@ export class CourseCommand extends Command {
 		})
 
 		this.bot.action('keymoney', (ctx) => {
-			ctx.telegram.sendVideo(ctx.chat.id, { source: './src/public/videos/example.mp4'}, {
-				reply_markup: course_tobuy_btn,
-				width: 320,
-				height: 180,
-				caption: course_keymoney_txt,
-			})
+			// ctx.telegram.sendVideo(ctx.chat.id, { source: './src/public/videos/example.mp4'}, {
+			// 	reply_markup: course_tobuy_btn,
+			// 	width: 320,
+			// 	height: 180,
+			// 	caption: course_keymoney_txt,
+			// })
 		})
 
 		this.bot.action('inv-master', (ctx) => {
-			ctx.telegram.sendVideo(ctx.chat.id, { source: './src/public/videos/example.mp4'}, {
-				reply_markup: course_tobuy_btn,
-				width: 320,
-				height: 180,
-				caption: course_invmaster_txt,
-			})
+			// ctx.telegram.sendVideo(ctx.chat.id, { source: './src/public/videos/example.mp4'}, {
+			// 	reply_markup: course_tobuy_btn,
+			// 	width: 320,
+			// 	height: 180,
+			// 	caption: course_invmaster_txt,
+			// })
 		})
 
 		this.bot.action('airdrop', (ctx) => {
-			ctx.telegram.sendVideo(ctx.chat.id, { source: './src/public/videos/example.mp4'}, {
-				reply_markup: course_tobuy_btn,
-				width: 320,
-				height: 180,
-				caption: course_airdrop_txt,
-			})
+			// ctx.telegram.sendVideo(ctx.chat.id, { source: './src/public/videos/example.mp4'}, {
+			// 	reply_markup: course_tobuy_btn,
+			// 	width: 320,
+			// 	height: 180,
+			// 	caption: course_airdrop_txt,
+			// })
 		})
 
 		this.bot.action('purchase', (ctx) => {

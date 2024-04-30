@@ -18,12 +18,12 @@ export class LearnScene extends Scene {
 		});
 		stepHandler.action('learn_watch', async (ctx: IBotContext) => {
 			ctx.session.learnState = true;
-			await ctx.telegram.sendVideo(ctx.chat.id, { source: './src/public/videos/example.mp4'}, {
-				reply_markup: learn_step2_btn,
-				width: 320,
-				height: 180,
-				caption: learn_step2,
-			})
+			// await ctx.telegram.sendVideo(ctx.chat.id, { source: './src/public/videos/example.mp4'}, {
+			// 	reply_markup: learn_step2_btn,
+			// 	width: 320,
+			// 	height: 180,
+			// 	caption: learn_step2,
+			// })
 			return ctx.wizard.next();
 		});
 
